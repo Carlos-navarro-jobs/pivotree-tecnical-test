@@ -32,9 +32,10 @@ Register and Login Scenarios
 Browsing items
     [Documentation]    Browsing items and checking for product details and some related web features
     [Tags]             Test2
+    BrowsingItemsApp.Prerequisite
     BrowsingItemsApp.Item Search 1
-
-
+    BrowsingItemsApp.Item Search 2
+    BrowsingItemsApp.Item Search 3
 
 #Placing an Order
 #    [Documentation]    Placing an order through manual and quick order methods

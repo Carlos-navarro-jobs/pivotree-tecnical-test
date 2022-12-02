@@ -44,13 +44,13 @@ Description:  Being logged in and from the home page, browse 3 items, checking f
 |Click on "Write A Review" button and input text on "Review Title, "Write your comments" and "Reviewer Name" with ("Solid camera", "Top end camera with excellent features", "Carlos"), click on 4/5 stars and click "Submit" button.|"Thank you for the review" text appears.|
 |shrink browser to XXX dimensions|browser is resized and hamburger button appearss in the top navigation bar replacing the product categories|
 |click on hamburger button on the left of the top navigation bar|drop down list with categories appears|
-|click on "CAMCORDERS"| 6 results for camcorders appear|
+|click on "FILM CAMERAS"| 2 results for Film cameras appear|
 |click the product layout button|item list appears in grid like formation|
-|click on "Gigashot K80H"|product detail page of "Gigashot K80H" appears|
+|click on "1V"|product detail page of "1V" appears|
 |click on "Add to Wish list"|"Add to Wish list" test turns into "Remove from Wish list"|
 |maximise browser|browser is maximised|
 |click on the top navigation serach bar and input "Straps"|drop  down list appears|
-|select "Wide Strap for EOS 450D"|product detail page of "Wide Strap for EOS 450D" appears|
+|select "Wide strap for eos ", press enter and select item Wide Strap for EOS 450D|product detail page of "Wide Strap for EOS 450D" appears|
 
 
 

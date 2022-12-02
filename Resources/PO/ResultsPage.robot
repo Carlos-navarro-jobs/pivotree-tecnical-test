@@ -5,8 +5,11 @@ Resource    TopNavigationBar.robot
 
 *** Variables ***
 ${RESULTS_ALLBRANDS_RELEVANCE_LIST} =             xpath=//div[@role="combobox"]
-${RESULTS_STR_TO_SEARCH} =                        DSLR-A900, body
-${RESULTS_TOP_HIT_LINK} =                         xpath=//cx-product-list-item[1]/div/div/a[@class="cx-product-name"]
+${RESULTS_STR_TO_SEARCH_ITEM1} =                        DSLR-A900, body
+${RESULTS_STR_TO_SEARCH_ITEM2} =                        1V
+${RESULTS_STR_TO_SEARCH_ITEM3} =                        Wide Strap for EOS
+#The position of this locator references the top hit
+${RESULTS_ITEM1_LINK} =                           xpath=//cx-product-list-item[1]/div/div/a[@class="cx-product-name"]
 @{RESULTS_PRODUCT_DETAILS_INFO_LOCATORS} =        xpath=//cx-product-details-tab    xpath=//cx-product-attributes    xpath=//cx-product-reviews    xpath=//cx-paragraph    
 @{RESULTS_PRODUCT_DETAILS_TITLE_LOCATORS} =       xpath=//cx-tab-paragraph-container/button[1]    xpath=//cx-tab-paragraph-container/button[2]    xpath=//cx-tab-paragraph-container/button[3]    xpath=//cx-tab-paragraph-container/button[4]
 @{RESULTS_EXPECTED_RESULTS_INFO} =                24.6 megapixel Digital Single Lens Reflex (D-SLR) camera, body only. Supreme imaging and professional features. Full-frame CMOS sensor with Exmor™ technology. High-performance pentaprism viewfinder with 100% coverage. High-speed 9-point AF, SteadyShot INSIDE and photo quality 3.0-inch 921k dot LCD.   Technical details    Overall Rating    Lorem ipsum dolor sit amet, dolor sed, ut nam ut.
@@ -14,7 +17,14 @@ ${RESULTS_WRITE_REIVEW_BUTTON} =                  xpath=//div[@class="header"]/b
 ${RESULTS_SUMBIT_BUTTON} =                        xpath=//button[@class="btn btn-block btn-primary"]
 @{RESULTS_REVIEW_INPUT_FILEDS} =                  xpath=//input[@formcontrolname="title"]    xpath=//textarea[@formcontrolname="comment"]    xpath=//input[@formcontrolname="reviewerName"]    xpath=//label/cx-star-rating/cx-icon[4]
 @{RESULTS_REVIEW_INPUT_INFO} =                    Proper solid camera.    Top end camera with excellent features.    Carlos              
+${RESULTS_PRODUCT_LAYOUT_GRID_BUTTON} =           xpath=//button[@aria-label="Select to change to Grid View"]
+${RESULTS_PRODUCT_LAYOUT_LIST_BUTTON} =           xpath=//button[@aria-label="Select to change to List View"]
+${RESULTS_ITEM2_LINK} =                           xpath=//a[@href="/electronics-spa/en/USD/product/898503/1V"]
+${RESULTS_ADD_TO _WICHLIST_LINK} =                xpath=//span[@class="button-text"]
+${RESULTS_WISHLIST_FULL_HEART} =                  xpath=//cx-icon[@class="cx-icon fas fa-heart"]
+${RESULTS_ITEM3_LINK} =                           xpath=//a[@href="/electronics-spa/en/USD/product/1422706/Wide%20Strap%20for%20EOS%20450D"]
 
+#6 results for Hand-held Camcorders
 
 
 *** Keywords ***
@@ -27,13 +37,13 @@ Sort by price descending
     Press Keys       None        ENTER
     
 Verify Sorting
-    Wait Until Page Contains   ${RESULTS_STR_TO_SEARCH}
+    Wait Until Page Contains   ${RESULTS_STR_TO_SEARCH_ITEM1}
     #This specifically checks item number one in the list
-    Element Should Contain     ${RESULTS_TOP_HIT_LINK}    ${RESULTS_STR_TO_SEARCH}
+    Element Should Contain     ${RESULTS_ITEM1_LINK}    ${RESULTS_STR_TO_SEARCH_ITEM1}
     Log    list sorted out correctly
 
-Verify individual product loaded and details
-    Click Link                              ${RESULTS_TOP_HIT_LINK}
+Verify item 1 product loaded and details
+    Click Link                              ${RESULTS_ITEM1_LINK}
     Wait Until Page Contains Element        ${RESULTS_PRODUCT_DETAILS_INFO_LOCATORS}[0]
     
     #Waiting for complete page to load does not work for me
@@ -58,3 +68,19 @@ Write a review
     Click Element                ${RESULTS_REVIEW_INPUT_FILEDS}[3]
     Click Button                 ${RESULTS_SUMBIT_BUTTON}
     Wait Until Page Contains     Thank you for the review
+
+Switch to grid product layout
+    Wait Until Page Contains Element    ${RESULTS_PRODUCT_LAYOUT_GRID_BUTTON}
+    Click Button                        ${RESULTS_PRODUCT_LAYOUT_GRID_BUTTON}
+    Wait Until Page Contains Element    ${RESULTS_PRODUCT_LAYOUT_LIST_BUTTON}
+    Log                                 Page is in a grid layout
+
+Click and verify item 2 product loaded and details
+    Click Element                          ${RESULTS_ITEM2_LINK} 
+    Wait Until page Contains Element       ${RESULTS_ADD_TO _WICHLIST_LINK}
+Add item 2 to wishlist
+    Click Element                          ${RESULTS_ADD_TO _WICHLIST_LINK}
+    Wait Until Page Contains Element       ${RESULTS_WISHLIST_FULL_HEART}
+
+Verify item 3 product loaded in search
+    Wait Until page Contains Element       ${RESULTS_ITEM3_LINK}

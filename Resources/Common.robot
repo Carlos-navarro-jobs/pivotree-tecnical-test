@@ -17,3 +17,9 @@ Begin Test
 
 End Test
     Close Browser
+
+Shrink Browser
+    Set Window Size    900    700
+
+Expand Browser
+    Maximize Browser Window
