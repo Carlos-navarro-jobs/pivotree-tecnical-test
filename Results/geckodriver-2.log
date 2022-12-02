@@ -1,0 +1,12 @@
+1669842675775	geckodriver	INFO	Listening on 127.0.0.1:50281
+1669842678844	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50282" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Carlos\\AppData\\Local\\Temp\\rust_mozprofilee0UDJa"
+1669842679034	Marionette	INFO	Marionette enabled
+1669842679040	Marionette	INFO	Listening on port 50292
+Read port: 50292
+WebDriver BiDi listening on ws://127.0.0.1:50282
+1669842679092	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Carlos\\AppData\\Local\\Temp\\rust_mozprofilee0UDJa\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50282/devtools/browser/453a489f-daa1-4a06-a883-16b635efb5b8
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://spartacus-demo.eastus.cloudapp.azure.com."
+1669842691996	Marionette	INFO	Stopped listening on port 50292

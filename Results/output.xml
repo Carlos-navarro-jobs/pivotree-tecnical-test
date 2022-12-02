@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.11.0 on win32)" generated="20221202 00:48:01.199" rpa="false" schemaversion="3">
+<suite id="s1" name="Scenarios" source="C:\WebDevelopment\robot-scripts\pivotree-tecnical-test\Tests\scenarios.robot">
+<test id="s1-t1" name="Browsing items" line="32">
+<kw name="Begin Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221202 00:48:01.326" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20221202 00:48:01.325" endtime="20221202 00:48:02.496"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221202 00:48:02.496" endtime="20221202 00:48:02.612"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221202 00:48:02.613" level="INFO">Opening url 'https://spartacus-demo.eastus.cloudapp.azure.com/electronics-spa/en/USD/'</msg>
+<status status="PASS" starttime="20221202 00:48:02.613" endtime="20221202 00:48:04.043"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Page Contains Element</arg>
+<arg>${ACCEPT_COOKIES_BUTTON}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${ACCEPT_COOKIES_BUTTON}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221202 00:48:04.043" endtime="20221202 00:48:06.626"/>
+</kw>
+<status status="PASS" starttime="20221202 00:48:04.043" endtime="20221202 00:48:06.626"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Click Button</arg>
+<arg>${ACCEPT_COOKIES_BUTTON}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${ACCEPT_COOKIES_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221202 00:48:06.626" level="INFO">Clicking button 'xpath=//button[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20221202 00:48:06.626" endtime="20221202 00:48:06.655"/>
+</kw>
+<status status="PASS" starttime="20221202 00:48:06.626" endtime="20221202 00:48:06.655"/>
+</kw>
+<status status="PASS" starttime="20221202 00:48:01.325" endtime="20221202 00:48:06.655"/>
+</kw>
+<kw name="Item Search 1" library="BrowsingItemsApp">
+<tag>item-search</tag>
+<tag>item1</tag>
+<kw name="Click All Brands link" library="TopNavigationBar">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Brands</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221202 00:48:06.656" endtime="20221202 00:48:06.867"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${TOPNAVIGATION_BRANDS_LIST}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20221202 00:48:06.867" level="INFO">Simulating Mouse Over on element 'xpath=//cx-navigation-ui[@class="flyout"]/nav/span'.</msg>
+<status status="PASS" starttime="20221202 00:48:06.867" endtime="20221202 00:48:07.135"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${TOPNAVIGATION_ALLBRANDS_LINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221202 00:48:07.135" level="INFO">Clicking link 'xpath=//a[@href="/electronics-spa/en/USD/Brands/all/c/brands"]'.</msg>
+<status status="PASS" starttime="20221202 00:48:07.135" endtime="20221202 00:48:07.196"/>
+</kw>
+<status status="PASS" starttime="20221202 00:48:06.655" endtime="20221202 00:48:07.196"/>
+</kw>
+<kw name="Verify Page Loaded" library="ResultsPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>176 results for Brands</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221202 00:48:07.196" endtime="20221202 00:48:08.252"/>
+</kw>
+<status status="PASS" starttime="20221202 00:48:07.196" endtime="20221202 00:48:08.253"/>
+</kw>
+<kw name="Sort by price descending" library="ResultsPage">
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${RESULTS_ALLBRANDS_RELEVANCE_LIST}</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20221202 00:48:08.253" level="INFO">Sending key(s) ('ARROW_DOWN',) to xpath=//div[@role="combobox"] element.</msg>
+<msg timestamp="20221202 00:48:08.542" level="INFO">Pressing special key ARROW_DOWN to element.</msg>
+<msg timestamp="20221202 00:48:08.542" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20221202 00:48:08.253" endtime="20221202 00:48:08.547"/>
+</kw>
+<kw name="Repeat Keyword" library="BuiltIn">
+<arg>4 times</arg>
+<arg>Press Keys</arg>
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Executes the specified keyword multiple times.</doc>
+<msg timestamp="20221202 00:48:08.547" level="INFO">Repeating keyword, round 1/4.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20221202 00:48:08.547" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20221202 00:48:08.547" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20221202 00:48:08.547" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20221202 00:48:08.547" endtime="20221202 00:48:08.550"/>
+</kw>
+<msg timestamp="20221202 00:48:08.550" level="INFO">Repeating keyword, round 2/4.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20221202 00:48:08.550" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20221202 00:48:08.550" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20221202 00:48:08.550" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20221202 00:48:08.550" endtime="20221202 00:48:08.552"/>
+</kw>
+<msg timestamp="20221202 00:48:08.552" level="INFO">Repeating keyword, round 3/4.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20221202 00:48:08.553" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20221202 00:48:08.553" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20221202 00:48:08.553" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20221202 00:48:08.553" endtime="20221202 00:48:08.555"/>
+</kw>
+<msg timestamp="20221202 00:48:08.555" level="INFO">Repeating keyword, round 4/4.</msg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20221202 00:48:08.555" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20221202 00:48:08.555" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20221202 00:48:08.555" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20221202 00:48:08.555" endtime="20221202 00:48:08.557"/>
+</kw>
+<status status="PASS" starttime="20221202 00:48:08.547" endtime="20221202 00:48:08.557"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20221202 00:48:08.557" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20221202 00:48:08.557" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20221202 00:48:08.557" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20221202 00:48:08.557" endtime="20221202 00:48:08.577"/>
+</kw>
+<status status="PASS" starttime="20221202 00:48:08.253" endtime="20221202 00:48:08.577"/>
+</kw>
+<kw name="Verify Sorting" library="ResultsPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${RESULTS_STR_TO_SEARCH}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221202 00:48:08.577" endtime="20221202 00:48:09.001"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${RESULTS_TOP_HIT_LINK}</arg>
+<arg>${RESULTS_STR_TO_SEARCH}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20221202 00:48:09.012" level="INFO">Element 'xpath=//cx-product-list-item[1]/div/div/a[@class="cx-product-name"]' contains text 'DSLR-A900, body'.</msg>
+<status status="PASS" starttime="20221202 00:48:09.001" endtime="20221202 00:48:09.012"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>list sorted out correctly</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221202 00:48:09.012" level="INFO">list sorted out correctly</msg>
+<status status="PASS" starttime="20221202 00:48:09.012" endtime="20221202 00:48:09.012"/>
+</kw>
+<status status="PASS" starttime="20221202 00:48:08.577" endtime="20221202 00:48:09.012"/>
+</kw>
+<kw name="Verify individual product loaded and details" library="ResultsPage">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${RESULTS_TOP_HIT_LINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221202 00:48:09.013" level="INFO">Clicking link 'xpath=//cx-product-list-item[1]/div/div/a[@class="cx-product-name"]'.</msg>
+<status status="PASS" starttime="20221202 00:48:09.012" endtime="20221202 00:48:09.037"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${RESULTS_PRODUCT_DETAILS_INFO_LOCATORS}[0]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221202 00:48:09.037" endtime="20221202 00:48:10.293"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221202 00:48:10.594" level="INFO">Slept 300 milliseconds</msg>
+<status status="PASS" starttime="20221202 00:48:10.293" endtime="20221202 00:48:10.594"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${index}</var>
+<value>4</value>
+<iter>
+<var name="${index}">0</var>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${RESULTS_PRODUCT_DETAILS_TITLE_LOCATORS}[${index}]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221202 00:48:10.594" level="INFO">Clicking button 'xpath=//cx-tab-paragraph-container/button[1]'.</msg>
+<status status="PASS" starttime="20221202 00:48:10.594" endtime="20221202 00:48:10.631"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${RESULTS_PRODUCT_DETAILS_INFO_LOCATORS}[${index}]</arg>
+<arg>${RESULTS_EXPECTED_RESULTS_INFO}[${index}]</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20221202 00:48:10.644" level="INFO">Element 'xpath=//cx-product-details-tab' contains text '24.6 megapixel Digital Single Lens Reflex (D-SLR) camera, body only. Supreme imaging and professional features. Full-frame CMOS sensor with Exmor™ technology. High-performance pentaprism viewfinder with 100% coverage. High-speed 9-point AF, SteadyShot INSIDE and photo quality 3.0-inch 921k dot LCD.'.</msg>
+<status status="PASS" starttime="20221202 00:48:10.631" endtime="20221202 00:48:10.644"/>
+</kw>
+<status status="PASS" starttime="20221202 00:48:10.594" endtime="20221202 00:48:10.644"/>
+</iter>
+<iter>
+<var name="${index}">1</var>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${RESULTS_PRODUCT_DETAILS_TITLE_LOCATORS}[${index}]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221202 00:48:10.644" level="INFO">Clicking button 'xpath=//cx-tab-paragraph-container/button[2]'.</msg>
+<status status="PASS" starttime="20221202 00:48:10.644" endtime="20221202 00:48:10.686"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${RESULTS_PRODUCT_DETAILS_INFO_LOCATORS}[${index}]</arg>
+<arg>${RESULTS_EXPECTED_RESULTS_INFO}[${index}]</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20221202 00:48:10.741" level="INFO">Element 'xpath=//cx-product-attributes' contains text 'Technical details'.</msg>
+<status status="PASS" starttime="20221202 00:48:10.686" endtime="20221202 00:48:10.741"/>
+</kw>
+<status status="PASS" starttime="20221202 00:48:10.644" endtime="20221202 00:48:10.741"/>
+</iter>
+<iter>
+<var name="${index}">2</var>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${RESULTS_PRODUCT_DETAILS_TITLE_LOCATORS}[${index}]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221202 00:48:10.742" level="INFO">Clicking button 'xpath=//cx-tab-paragraph-container/button[3]'.</msg>
+<status status="PASS" starttime="20221202 00:48:10.741" endtime="20221202 00:48:10.781"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${RESULTS_PRODUCT_DETAILS_INFO_LOCATORS}[${index}]</arg>
+<arg>${RESULTS_EXPECTED_RESULTS_INFO}[${index}]</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20221202 00:48:10.803" level="INFO">Element 'xpath=//cx-product-reviews' contains text 'Overall Rating'.</msg>
+<status status="PASS" starttime="20221202 00:48:10.781" endtime="20221202 00:48:10.803"/>
+</kw>
+<status status="PASS" starttime="20221202 00:48:10.741" endtime="20221202 00:48:10.803"/>
+</iter>
+<iter>
+<var name="${index}">3</var>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${RESULTS_PRODUCT_DETAILS_TITLE_LOCATORS}[${index}]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221202 00:48:10.805" level="INFO">Clicking button 'xpath=//cx-tab-paragraph-container/button[4]'.</msg>
+<status status="PASS" starttime="20221202 00:48:10.803" endtime="20221202 00:48:10.840"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${RESULTS_PRODUCT_DETAILS_INFO_LOCATORS}[${index}]</arg>
+<arg>${RESULTS_EXPECTED_RESULTS_INFO}[${index}]</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20221202 00:48:10.856" level="INFO">Element 'xpath=//cx-paragraph' contains text 'Lorem ipsum dolor sit amet, dolor sed, ut nam ut.'.</msg>
+<status status="PASS" starttime="20221202 00:48:10.840" endtime="20221202 00:48:10.856"/>
+</kw>
+<status status="PASS" starttime="20221202 00:48:10.803" endtime="20221202 00:48:10.856"/>
+</iter>
+<status status="PASS" starttime="20221202 00:48:10.594" endtime="20221202 00:48:10.856"/>
+</for>
+<kw name="Log" library="BuiltIn">
+<arg>Correct product details page</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221202 00:48:10.856" level="INFO">Correct product details page</msg>
+<status status="PASS" starttime="20221202 00:48:10.856" endtime="20221202 00:48:10.856"/>
+</kw>
+<status status="PASS" starttime="20221202 00:48:09.012" endtime="20221202 00:48:10.856"/>
+</kw>
+<kw name="Write a review" library="ResultsPage">
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<arg>return document.readyState == "complete"</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" starttime="20221202 00:48:10.857" endtime="20221202 00:48:10.860"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${RESULTS_PRODUCT_DETAILS_TITLE_LOCATORS}[2]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221202 00:48:10.861" level="INFO">Clicking button 'xpath=//cx-tab-paragraph-container/button[3]'.</msg>
+<status status="PASS" starttime="20221202 00:48:10.860" endtime="20221202 00:48:10.890"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${RESULTS_WRITE_REIVEW_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221202 00:48:10.891" level="INFO">Clicking button 'xpath=//div[@class="header"]/button[@class="btn btn-primary"]'.</msg>
+<status status="PASS" starttime="20221202 00:48:10.890" endtime="20221202 00:48:10.934"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${RESULTS_REVIEW_INPUT_FILEDS}[0]</arg>
+<arg>${RESULTS_REVIEW_INPUT_INFO}[0]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221202 00:48:10.935" level="INFO">Typing text 'Proper solid camera.' into text field 'xpath=//input[@formcontrolname="title"]'.</msg>
+<status status="PASS" starttime="20221202 00:48:10.934" endtime="20221202 00:48:10.984"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${RESULTS_REVIEW_INPUT_FILEDS}[1]</arg>
+<arg>${RESULTS_REVIEW_INPUT_INFO}[1]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221202 00:48:10.984" level="INFO">Typing text 'Top end camera with excellent features.' into text field 'xpath=//textarea[@formcontrolname="comment"]'.</msg>
+<status status="PASS" starttime="20221202 00:48:10.984" endtime="20221202 00:48:11.050"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${RESULTS_REVIEW_INPUT_FILEDS}[2]</arg>
+<arg>${RESULTS_REVIEW_INPUT_INFO}[2]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221202 00:48:11.051" level="INFO">Typing text 'Carlos' into text field 'xpath=//input[@formcontrolname="reviewerName"]'.</msg>
+<status status="PASS" starttime="20221202 00:48:11.050" endtime="20221202 00:48:11.104"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RESULTS_REVIEW_INPUT_FILEDS}[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221202 00:48:11.105" level="INFO">Clicking element 'xpath=//label/cx-star-rating/cx-icon[4]'.</msg>
+<status status="PASS" starttime="20221202 00:48:11.104" endtime="20221202 00:48:11.132"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${RESULTS_SUMBIT_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221202 00:48:11.132" level="INFO">Clicking button 'xpath=//button[@class="btn btn-block btn-primary"]'.</msg>
+<status status="PASS" starttime="20221202 00:48:11.132" endtime="20221202 00:48:11.177"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Thank you for the review</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221202 00:48:11.178" endtime="20221202 00:48:11.397"/>
+</kw>
+<status status="PASS" starttime="20221202 00:48:10.856" endtime="20221202 00:48:11.397"/>
+</kw>
+<status status="PASS" starttime="20221202 00:48:06.655" endtime="20221202 00:48:11.397"/>
+</kw>
+<kw name="End Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221202 00:48:11.398" endtime="20221202 00:48:13.543"/>
+</kw>
+<status status="PASS" starttime="20221202 00:48:11.398" endtime="20221202 00:48:13.543"/>
+</kw>
+<doc>Browsing items and checking for product details and some related web features</doc>
+<tag>Test2</tag>
+<status status="PASS" starttime="20221202 00:48:01.325" endtime="20221202 00:48:13.544"/>
+</test>
+<doc>3 important tests to run</doc>
+<status status="PASS" starttime="20221202 00:48:01.200" endtime="20221202 00:48:13.544"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Test2</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Scenarios">Scenarios</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221202 00:48:01.324" level="WARN">Imported resource file 'C:\WebDevelopment\robot-scripts\pivotree-tecnical-test\Resources\PlacingOrderApp.robot' is empty.</msg>
+</errors>
+</robot>
