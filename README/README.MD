@@ -139,7 +139,7 @@ Description: Being logged in and having placed an order, from the order history 
 
 I selected the first three tests to automate, namely: "Testing register and login scenarios", "Browsing items checking for functionality and various functions" and "Placing an order of several items".
 
-To run the suite, open the file "pivotree-tecnical-test" in your IDE and making sure you are on the "C:\*\pivotree-tecnical-test" directory type the "robot -d results Tests/scenarios.robot" in the terminal to ensure that the results are savedd appropriately.
+To run the suite, open the file "pivotree-tecnical-test" in your IDE and making sure you are on the "C:\*\pivotree-tecnical-test" directory type the "robot -d results Tests/scenarios.robot" in the terminal to ensure that the results are savedd appropriately. Selectively use tag "--i Test3" to run "Test3" on its own for example.
 
 ### Potential sources of non intended fails.
 Although I used a Run keyowrd and continue on Fail for the accepting cookies part in the Test setup, this step sometimes causes a fail.
