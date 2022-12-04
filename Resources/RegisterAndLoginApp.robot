@@ -63,6 +63,7 @@ Invalid Password Login
     LoginPage.Fill Password         ${INVALID_REGISTER_INFO}[3]
     LoginPage.Click SignIn Button
     LoginPage.Check for invalid credentials
+    
 Unregistered Email Login
     [Tags]    login    invalid
     Reload Page

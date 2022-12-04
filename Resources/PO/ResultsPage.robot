@@ -2,6 +2,7 @@
 Library  SeleniumLibrary
 
 Resource    TopNavigationBar.robot
+Resource    LoginPage.robot
 
 *** Variables ***
 ${RESULTS_ALLBRANDS_RELEVANCE_LIST} =             xpath=//div[@role="combobox"]
@@ -23,8 +24,10 @@ ${RESULTS_ITEM2_LINK} =                           xpath=//a[@href="/electronics-
 ${RESULTS_ADD_TO _WICHLIST_LINK} =                xpath=//span[@class="button-text"]
 ${RESULTS_WISHLIST_FULL_HEART} =                  xpath=//cx-icon[@class="cx-icon fas fa-heart"]
 ${RESULTS_ITEM3_LINK} =                           xpath=//a[@href="/electronics-spa/en/USD/product/1422706/Wide%20Strap%20for%20EOS%20450D"]
-
-#6 results for Hand-held Camcorders
+${RESULTS_ADD_PRODUCT_TO_CART_BUTTON} =           xpath=//form/button[@type="submit"]
+${RESULTS_VIEW_CART_LINK} =                       xpath=//a[@cxmodalreason="View Cart click"]
+${RESULTS_CART_COUNT} =                           xpath=//span[@class="count"]
+${RESULTS_PROCEED_TO_CHECKOUT_BUTTON} =           xpath=//button[@class="btn btn-primary btn-block"]
 
 
 *** Keywords ***
@@ -84,3 +87,32 @@ Add item 2 to wishlist
 
 Verify item 3 product loaded in search
     Wait Until page Contains Element       ${RESULTS_ITEM3_LINK}
+
+Verify generic search worked and click first link
+    [Arguments]                             ${itemname}
+    #This doesnt actually wait for the page to load and the previous item is clicked twice, a manual slee has to be inserted
+    #Wait For Condition	return document.readyState == "complete"
+    sleep     1        
+    Wait Until page Contains Element        ${RESULTS_ITEM1_LINK}
+    click link                              ${RESULTS_ITEM1_LINK}
+    Wait until page contains                ${itemname}
+
+Add product to cart and view cart
+    [Arguments]                             ${itemname}
+    Wait For Condition	return document.readyState == "complete"
+    wait until page contains                 ${itemname}
+    Wait For Condition	return document.readyState == "complete"
+    Wait Until page Contains Element         ${RESULTS_ADD_PRODUCT_TO_CART_BUTTON}
+    Click button                             ${RESULTS_ADD_PRODUCT_TO_CART_BUTTON}
+    Wait For Condition	return document.readyState == "complete"
+    Wait Until page Contains Element         ${RESULTS_VIEW_CART_LINK}
+    Click Link                               ${RESULTS_VIEW_CART_LINK}
+Verify Cart count
+    [Arguments]        ${count}
+    Wait until element Contains              ${RESULTS_CART_COUNT}   ${count}
+proceed to checkout
+    Wait Until Keyword Succeeds    5    1    click button                             ${RESULTS_PROCEED_TO_CHECKOUT_BUTTON}
+
+    
+    
+    

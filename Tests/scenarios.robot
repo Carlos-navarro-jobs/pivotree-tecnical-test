@@ -1,5 +1,4 @@
 *** Settings ***
-Documentation       3 important tests to run
 Library             SeleniumLibrary
 Resource            ../Resources/Common.robot
 Resource            ../Resources/RegisterAndLoginApp.robot
@@ -37,6 +36,11 @@ Browsing items
     BrowsingItemsApp.Item Search 2
     BrowsingItemsApp.Item Search 3
 
-#Placing an Order
-#    [Documentation]    Placing an order through manual and quick order methods
-#    [Tags]             Test3
+Placing an Order
+    [Documentation]    Placing an order through manual and quick order methods
+    [Tags]             Test3
+    PlacingOrderApp.Prerequisite
+    PlacingOrderApp.Add Item 1 to cart
+    PlacingOrderApp.Add Item 2 to cart
+    PlacingOrderApp.Checkout & place order
+    sleep  4

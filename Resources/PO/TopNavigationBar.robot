@@ -17,7 +17,8 @@ ${TOPNAVIGATION_SEARCHBAR} =                   xpath=//input[@aria-label="Search
 Click SignIn Link
     Click Link              ${TOPNAVIGATION_SIGNIN_REGISTER_LINK}
 Click All Brands link
-    Wait Until Page Contains      Brands
+    #This wait breaks the code, I do not understand why
+    #Wait until Page Contains      ${TOPNAVIGATION_BRANDS_LIST}  
     Mouse Over                    ${TOPNAVIGATION_BRANDS_LIST}     
     Click Link                    ${TOPNAVIGATION_ALLBRANDS_LINK}
 Click Hamburger Button
@@ -29,6 +30,8 @@ Click Film Cameras link
     Wait Until Page Contains            Film Cameras
     Click Element                       ${TOPNAVIGATION_FILM_CAMERAS_LINK}
 
-Search for Item 3 in top navigation Search
-    Input Text                     ${TOPNAVIGATION_SEARCHBAR}        Wide Strap for EOS
+Top Navigation Item Search
+    [Arguments]                    ${item}
+    Input Text                     ${TOPNAVIGATION_SEARCHBAR}        ${item}
     Press Keys                      NONE     ENTER
+    Wait For Condition	return document.readyState == "complete"

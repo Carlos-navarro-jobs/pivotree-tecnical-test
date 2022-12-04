@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.13 on win32)" generated="20221204 18:34:29.257" rpa="false" schemaversion="2">
+<suite id="s1" name="Scenarios" source="c:\WebDevelopment\robot-scripts\pivotree-tecnical-test\Tests\scenarios.robot">
+<test id="s1-t1">
+<doc>Testing valid and unvalid register and login scenarios</doc>
+<tag>Test1</tag>
+<status status="FAIL" starttime="20221204 18:34:29.403" endtime="20221204 18:34:29.404">Test case name cannot be empty.</status>
+</test>
+<doc>3 important tests to run</doc>
+<status status="FAIL" starttime="20221204 18:34:29.318" endtime="20221204 18:34:29.405"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Test1</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Scenarios">Scenarios</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221204 18:34:29.221" level="ERROR">Error in file 'c:\WebDevelopment\robot-scripts\pivotree-tecnical-test\Tests\scenarios.robot' on line 33: Setting 'Documentation' is allowed only once. Only the first value is used.</msg>
+<msg timestamp="20221204 18:34:29.221" level="ERROR">Error in file 'c:\WebDevelopment\robot-scripts\pivotree-tecnical-test\Tests\scenarios.robot' on line 34: Setting 'Tags' is allowed only once. Only the first value is used.</msg>
+<msg timestamp="20221204 18:34:29.333" level="ERROR">Error in file 'c:\WebDevelopment\robot-scripts\pivotree-tecnical-test\Tests\scenarios.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src\robotframework_debug_adapter
+  C:\WebDevelopment\robot-scripts\pivotree-tecnical-test
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src\robotframework_ls\vendored
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\python39.zip
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\DLLs
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094
+  c:\ProgramData\robocorp\ht
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\win32
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\win32\lib
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20221204 18:34:29.338" level="ERROR">Error in file 'c:\WebDevelopment\robot-scripts\pivotree-tecnical-test\Resources\Common.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src\robotframework_debug_adapter
+  C:\WebDevelopment\robot-scripts\pivotree-tecnical-test
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src\robotframework_ls\vendored
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\python39.zip
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\DLLs
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094
+  c:\ProgramData\robocorp\ht
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\win32
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\win32\lib
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20221204 18:34:29.344" level="ERROR">Error in file 'c:\WebDevelopment\robot-scripts\pivotree-tecnical-test\Resources\RegisterAndLoginApp.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src\robotframework_debug_adapter
+  C:\WebDevelopment\robot-scripts\pivotree-tecnical-test
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src\robotframework_ls\vendored
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\python39.zip
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\DLLs
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094
+  c:\ProgramData\robocorp\ht
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\win32
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\win32\lib
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20221204 18:34:29.348" level="ERROR">Error in file 'c:\WebDevelopment\robot-scripts\pivotree-tecnical-test\Resources\PO\HomePage.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src\robotframework_debug_adapter
+  C:\WebDevelopment\robot-scripts\pivotree-tecnical-test
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src\robotframework_ls\vendored
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\python39.zip
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\DLLs
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094
+  c:\ProgramData\robocorp\ht
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\win32
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\win32\lib
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20221204 18:34:29.354" level="ERROR">Error in file 'c:\WebDevelopment\robot-scripts\pivotree-tecnical-test\Resources\PO\LoginPage.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src\robotframework_debug_adapter
+  C:\WebDevelopment\robot-scripts\pivotree-tecnical-test
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src\robotframework_ls\vendored
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\python39.zip
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\DLLs
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094
+  c:\ProgramData\robocorp\ht
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\win32
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\win32\lib
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20221204 18:34:29.359" level="ERROR">Error in file 'c:\WebDevelopment\robot-scripts\pivotree-tecnical-test\Resources\PO\RegisterPage.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src\robotframework_debug_adapter
+  C:\WebDevelopment\robot-scripts\pivotree-tecnical-test
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src\robotframework_ls\vendored
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\python39.zip
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\DLLs
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094
+  c:\ProgramData\robocorp\ht
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\win32
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\win32\lib
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20221204 18:34:29.364" level="ERROR">Error in file 'c:\WebDevelopment\robot-scripts\pivotree-tecnical-test\Resources\PO\ForgotPasswordPage.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src\robotframework_debug_adapter
+  C:\WebDevelopment\robot-scripts\pivotree-tecnical-test
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src\robotframework_ls\vendored
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\python39.zip
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\DLLs
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094
+  c:\ProgramData\robocorp\ht
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\win32
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\win32\lib
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20221204 18:34:29.369" level="ERROR">Error in file 'c:\WebDevelopment\robot-scripts\pivotree-tecnical-test\Resources\PO\TopNavigationBar.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src\robotframework_debug_adapter
+  C:\WebDevelopment\robot-scripts\pivotree-tecnical-test
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src\robotframework_ls\vendored
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\python39.zip
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\DLLs
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094
+  c:\ProgramData\robocorp\ht
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\win32
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\win32\lib
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20221204 18:34:29.373" level="ERROR">Error in file 'c:\WebDevelopment\robot-scripts\pivotree-tecnical-test\Resources\BrowsingItemsApp.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src\robotframework_debug_adapter
+  C:\WebDevelopment\robot-scripts\pivotree-tecnical-test
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src\robotframework_ls\vendored
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\python39.zip
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\DLLs
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094
+  c:\ProgramData\robocorp\ht
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\win32
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\win32\lib
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20221204 18:34:29.380" level="ERROR">Error in file 'c:\WebDevelopment\robot-scripts\pivotree-tecnical-test\Resources\PO\ResultsPage.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src\robotframework_debug_adapter
+  C:\WebDevelopment\robot-scripts\pivotree-tecnical-test
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src\robotframework_ls\vendored
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\python39.zip
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\DLLs
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094
+  c:\ProgramData\robocorp\ht
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\win32
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\win32\lib
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20221204 18:34:29.385" level="ERROR">Error in file 'c:\WebDevelopment\robot-scripts\pivotree-tecnical-test\Resources\InputData.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src\robotframework_debug_adapter
+  C:\WebDevelopment\robot-scripts\pivotree-tecnical-test
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src\robotframework_ls\vendored
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\python39.zip
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\DLLs
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094
+  c:\ProgramData\robocorp\ht
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\win32
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\win32\lib
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20221204 18:34:29.391" level="ERROR">Error in file 'c:\WebDevelopment\robot-scripts\pivotree-tecnical-test\Resources\PlacingOrderApp.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src\robotframework_debug_adapter
+  C:\WebDevelopment\robot-scripts\pivotree-tecnical-test
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src\robotframework_ls\vendored
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\python39.zip
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\DLLs
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094
+  c:\ProgramData\robocorp\ht
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\win32
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\win32\lib
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20221204 18:34:29.399" level="ERROR">Error in file 'c:\WebDevelopment\robot-scripts\pivotree-tecnical-test\Resources\PO\checkout.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src\robotframework_debug_adapter
+  C:\WebDevelopment\robot-scripts\pivotree-tecnical-test
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src
+  c:\Users\Carlos\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src\robotframework_ls\vendored
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\python39.zip
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\DLLs
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094
+  c:\ProgramData\robocorp\ht
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\win32
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\win32\lib
+  c:\ProgramData\robocorp\ht\8e2bfcb_b1f3c24_b352a094\lib\site-packages\Pythonwin</msg>
+</errors>
+</robot>

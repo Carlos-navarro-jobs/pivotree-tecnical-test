@@ -5,6 +5,7 @@ Resource           PO/LoginPage.robot
 Resource           PO/TopNavigationBar.robot
 Resource           PO/ResultsPage.robot
 Resource           Common.robot
+Resource           InputData.robot
 
 
 Resource           RegisterAndLoginApp.robot
@@ -38,5 +39,5 @@ Item Search 2
     ResultsPage.Add item 2 to wishlist
 Item Search 3
     [Tags]    item-search    item3
-    TopNavigationBar.Search for Item 3 in top navigation Search
+    TopNavigationBar.Top Navigation Item Search            ${RESULTS_STR_TO_SEARCH_ITEM3}
     ResultsPage.Verify item 3 product loaded in search

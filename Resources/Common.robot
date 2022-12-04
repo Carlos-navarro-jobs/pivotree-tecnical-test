@@ -1,10 +1,11 @@
 *** Settings ***
-
-
 Library    SeleniumLibrary
+
 *** Variables ***
-${BROWSER} =     chrome
-${URL} =     https://spartacus-demo.eastus.cloudapp.azure.com/electronics-spa/en/USD/
+
+
+${BROWSER} =                    chrome
+${URL} =                        https://spartacus-demo.eastus.cloudapp.azure.com/electronics-spa/en/USD/
 ${ACCEPT_COOKIES_BUTTON} =      xpath=//button[@class="btn btn-primary"]
 *** Keywords ***
 Begin Test
