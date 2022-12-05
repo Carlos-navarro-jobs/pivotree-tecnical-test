@@ -60,7 +60,7 @@ Priority: 3
 
 Estimation: 2
 
-Pre-conditions: Must be logged in and navigate to the home page and no adress or payment method must exist
+Pre-conditions: Must be logged in and navigate to the home page and no adress or payment method must exist and cart must be empty.
     
 Description:  Being logged in and from the home page, browse for 2 different items and items to the cart. Proceed to checkout, fill in shipping addres, method and payment details, checking for required fileds at each step and place order.
 
@@ -146,4 +146,4 @@ Although I used a Run keyowrd and continue on Fail for the accepting cookies par
 
 I developed this suite with an internet connection that is not consistent and sometimes has abnormally high loading times (> 5 seconds instead of the normal instant loading times). This causes some "Wait for page to contain" keywords to fail, this should not be a problem sith a stable connection.
 
-The last test has been developed to make a first order involving the filling up of adress and payment methods. Running the script twice without deleting the saved address and payment method causes a fail. This will be adress in the future.
+The last test has been developed to make a first order involving the filling up of adress and payment methods. Running the suite twice without deleting the saved address and payment method causes a fail. Having a non/empty cart similarly causes a fail as this test checks the number of items at each step. This will be adressed in the future.
